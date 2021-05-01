@@ -48,7 +48,7 @@ function draw() {
 	groundObject=new ground(width/2,670,width,20);
 	dustbinObj=new dustbin(1200,650);
 
-    slingshot = new SlingShot(paperObject.body,{x:182, y:52});
+  
 	stage=2;
 
   
@@ -58,7 +58,7 @@ function draw() {
   if  (stage===2){
 	if (keyDown("space")){
 		stage=1;
-		
+		slingshot = new SlingShot(paperObject.body,{x:182, y:52});
 	 }
 
   }
