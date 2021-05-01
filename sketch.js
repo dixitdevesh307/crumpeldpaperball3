@@ -58,7 +58,7 @@ function draw() {
   if  (stage===2){
 	if (keyDown("space")){
 		stage=1;
-		slingshot = new SlingShot(paperObject.body,{x:182, y:52});
+		
 	 }
 
   }
