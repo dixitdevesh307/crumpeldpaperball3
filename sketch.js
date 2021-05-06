@@ -8,7 +8,7 @@ const Constraint = Matter.Constraint;
 var dustbinObj, paperObject,groundObject	
 // var   world;
 var slingShot;
-var stage=1;
+
 
 function setup() {
 	createCanvas(1600, 700);
@@ -32,7 +32,12 @@ function setup() {
 	// 	}
 	//   });
   
-  
+  paperObject=new paper(200,450,70);
+	  slingshot = new SlingShot(paperObject.body,{x:182, y:52});
+	groundObject=new ground(width/2,670,width,20);
+	dustbinObj=new dustbin(1200,650);paperObject=new paper(200,450,70);
+	groundObject=new ground(width/2,670,width,20);
+	dustbinObj=new dustbin(1200,650);
 	Engine.run(engine);
 	// Render.run(render);
 	
@@ -43,25 +48,22 @@ function draw() {
   rectMode(CENTER);
   background(230);
  
-  if (stage===1){
-	paperObject=new paper(200,450,70);
-	groundObject=new ground(width/2,670,width,20);
-	dustbinObj=new dustbin(1200,650);
-
-    slingshot = new SlingShot(paperObject.body,{x:182, y:52});
-	stage=2;
+ 
 
   
-  }
-  
-  
-  if  (stage===2){
-	if (keyDown("space")){
-		stage=1;
-		slingshot = new SlingShot(paperObject.body,{x:182, y:52});
-	 }
+	
 
-  }
+  
+  
+  
+  
+ 
+	
+		
+// 		slingshot = new SlingShot(paperObject.body,{x:182, y:52});
+	 
+
+  
   paperObject.display();
   groundObject.display();
   dustbinObj.display();
@@ -86,4 +88,8 @@ function mouseDragged(){
 
 function mouseReleased(){
 	slingshot.fly();
+}
+function press(){
+	if(keyCode==32){
+	}
 }
