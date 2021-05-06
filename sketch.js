@@ -20,7 +20,7 @@ function setup() {
 	
 	
 	//Create a Ground
-	
+	slingshot = new SlingShot(paperObject.body,{x:182, y:52});
 
 	// var render = Render.create({
 	// 	element: document.body,
@@ -33,7 +33,7 @@ function setup() {
 	//   });
   
         paperObject=new paper(200,450,70);
-	slingshot = new SlingShot(paperObject.body,{x:182, y:52});
+	
 	groundObject=new ground(width/2,670,width,20);
 	dustbinObj=new dustbin(1200,650);paperObject=new paper(200,450,70);
 	groundObject=new ground(width/2,670,width,20);
