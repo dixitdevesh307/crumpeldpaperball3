@@ -90,7 +90,3 @@ function mouseDragged(){
 function mouseReleased(){
 	slingshot.fly();
 }
-function press(){
-	if(keyCode==32){
-	}
-}
